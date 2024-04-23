@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b035cbff-51a3-41b9-9c56-313940fc62fa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `pendaftar`]]>
+	</queryString>
+	<field name="nik" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_lengkap" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_keluarga" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="provinsi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement x="198" y="11" width="323" height="31" uuid="a7848c04-e80b-435a-865a-25c46516f69a"/>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Data Terpadu Kesejahteraan Sosial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="53" width="264" height="20" uuid="9cd93e96-cb00-4073-b708-0c74f784862d"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial Black" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Salemba Raya No. 28, Jakarta Pusat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="33" width="177" height="20" uuid="19caef77-c6d2-4515-8605-2182c7d5c7a1"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Masyarakat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="65" width="100" height="20" uuid="87a64fe8-8794-4b66-a0b1-e0de81c65fdf"/>
+				<textElement>
+					<font fontName="Arial Black" size="10"/>
+				</textElement>
+				<text><![CDATA[081280608095]]></text>
+			</staticText>
+			<image>
+				<reportElement x="84" y="11" width="192" height="67" uuid="3b91e223-b8f4-4a14-a35c-10600862131f"/>
+				<imageExpression><![CDATA["C:\\Tugas Semester 6\\ProgramKKPTerbaru\\src\\Gambar\\jkt.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="655e217c-3b2a-4a81-802d-f2602a1ea068"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="111" height="15" forecolor="#2D698D" uuid="1ce0bfae-3dc0-4aba-a8ce-1984fa8f3d72"/>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="0" width="111" height="15" forecolor="#2D698D" uuid="7a7d6214-efe1-424c-90fa-229999efb61f"/>
+				<text><![CDATA[Nama Lengkap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="0" width="111" height="15" forecolor="#2D698D" uuid="b01b39b7-6cfc-41a1-866b-30ed2c4c8bf7"/>
+				<text><![CDATA[Status Keluarga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="0" width="111" height="15" forecolor="#2D698D" uuid="ba9e21c2-f1e2-4576-ac8b-adbdcf1e6728"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="0" width="111" height="15" forecolor="#2D698D" uuid="8cbca276-ef8a-4ee6-ab09-18af026c9525"/>
+				<text><![CDATA[Provinsi	]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="c000a66a-7b3f-4301-86d3-bb3f465f81b9"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="246cf606-d665-43be-805f-22828f7146c8"/>
+					<textFieldExpression><![CDATA[$F{nik}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="bd76433d-2a2c-4516-885f-ea91a476335b"/>
+					<textFieldExpression><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="1a819bc4-8ae0-4f02-ba09-38073f908409"/>
+					<textFieldExpression><![CDATA[$F{status_keluarga}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="b23f58e9-617d-4499-94b4-0072d22d0da5"/>
+					<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="71e63c2f-4c2d-437b-8a3c-c1adad767a53"/>
+					<textFieldExpression><![CDATA[$F{provinsi}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="59" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="689ae145-127c-414e-806a-d9304ddab1f1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="488" y="46" width="67" height="13" uuid="6682b7bd-2295-474e-99fc-0c255c108eff"/>
+				<text><![CDATA[Apri Amsyah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="3" width="67" height="14" uuid="6a671d2f-15f4-4016-b557-25e76abdfee2"/>
+				<text><![CDATA[Kepala DTKS]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#2D698D" backcolor="#2D698D" uuid="7c6e2fd7-bc4a-48e2-8f1d-0cd5a8b2851b"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#FFFFFF" uuid="d195b0d7-b1bf-4541-b9c1-1aea66dd8f0e"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="d32834c2-9f25-4a0b-abc9-b5912bc1431e"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#FFFFFF" uuid="c598afdc-ec2a-4487-9566-34f17fc02c68"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
